@@ -2,7 +2,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-@app.route('/mslcTransfer/<mslcURL>')
+@app.route('/mslcTransfer/<path:mslcURL>')
 def mslcTransfer(mslcURL):
     try:
         code = str(request.args.get('code'))
