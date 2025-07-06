@@ -5,8 +5,7 @@ app = Flask(__name__)
 @app.route('/mslcTransfer/<path:mslcURL>')
 def mslcTransfer(mslcURL):
     try:
-        code = str(request.args.get('code'))
-        return redirect(str(mslcURL) + f'?code={code}')
+        return redirect(str(mslcURL))
     except:
         return "There was an error with the redirect URL. We don't know where to redirect you. Please return to the page you came from manually."
 
