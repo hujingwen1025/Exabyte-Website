@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Exabyte - Making Tech More Approachable{% endblock %}</title>
+    <link rel="canonical" href="https://exabyte.org.cn">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='resources/exabyte.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                <img src="{{ url_for('static', filename='resources/exabyte.png') }}" alt="Exabyte Logo" style="height: 40px; width: auto;">
+                <span>Exabyte</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/mission">Mission</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>⚡ Exabyte</h4>
+                <p>Making technology safe, approachable, and easy to use for everyone.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem;"><strong>exabyte.org.cn</strong></p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/mission">Our Mission</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Open Source</h4>
+                <ul>
+                    <li><a href="https://github.com/exabyteorg" target="_blank">GitHub</a></li>
+                    <li><a href="https://github.com/exabyteorg" target="_blank">Contribute</a></li>
+                    <li><a href="https://github.com/exabyteorg" target="_blank">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/contact">Contact Us</a></li>
+                    <li><a href="https://github.com/exabyte" target="_blank">Blog</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Exabyte. All rights reserved. Open source and made with ❤️</p>
+        </div>
+    </footer>
+</body>
+</html>
