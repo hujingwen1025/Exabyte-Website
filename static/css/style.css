@@ -4,6 +4,19 @@
     src: url(/static/resources/FluentEmojiColor.ttf);
 }
 
+/* Emoji usage: apply the msEmoji font to elements that contain emoji characters.
+   - `.card-icon` and `.feature-image` are used site-wide for emoji graphics.
+   - `.emoji` is a utility class you can add to any element with emoji.
+   - Footer headings often include a small emoji (e.g., "⚡ Exabyte").
+*/
+.emoji,
+.card-icon,
+.feature-image,
+footer .footer-section h4 {
+    font-family: msEmoji, system-ui, -apple-system, 'Segoe UI Emoji', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
+    /* ensure emoji render at their native size and color font where supported */
+    font-variation-settings: normal;
+}
 /* CSS Variables */
 :root {
     --primary-color: #14c7e1;
